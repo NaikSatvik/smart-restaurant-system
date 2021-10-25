@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-project-assignment",
+  "version": "1.0.0",
+  "description": "restaurant-management-system",
+  "author": "Satvik Naik",
+  "license": "MIT",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
+  "dependencies": {
+    "alert": "^5.0.10",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.16.1",
+    "express-session": "^1.17.2",
+    "jade": "^1.11.0",
+    "lit-html": "^2.0.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.14",
+    "popups": "^1.1.3"
+  },
+  "scripts": {
+    "nodemon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satvik2001Naik/restaurant-management-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Satvik2001Naik/restaurant-management-system/issues"
+  },
+  "homepage": "https://github.com/Satvik2001Naik/restaurant-management-system#readme"
+}

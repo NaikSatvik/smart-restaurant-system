@@ -7,7 +7,7 @@
 Victory HTML CSS Template
 https://templatemo.com/tm-507-victory
 -->
-        <title>Victory HTML CSS Template</title>
+        <title>Victory Restaurant</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,6 +23,7 @@ https://templatemo.com/tm-507-victory
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     </head>
 
 <body>
@@ -45,6 +46,8 @@ https://templatemo.com/tm-507-victory
                         <li><a href="menu.html">Our Menus</a></li>
                         <li><a href="blog.html">Blog Entries</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li style="color: green; border: 2px solid green; border-radius: 12px;"><a href="/login1">Login</a></li>
+                        <li style="color: blue; border: 2px solid blue; border-radius: 12px;"><a href="/signup">SignUp</a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -166,7 +169,7 @@ https://templatemo.com/tm-507-victory
                             <div class="row">
                                 <div class="col-md-6">
                                     <fieldset>
-                                        <select required name='day' onchange='this.form.()'>
+                                        <select required name='day'>
                                             <option value="">Select day</option>
                                             <option value="Monday">Monday</option>
                                             <option value="Tuesday">Tuesday</option>
@@ -180,7 +183,7 @@ https://templatemo.com/tm-507-victory
                                 </div>
                                 <div class="col-md-6">
                                     <fieldset>
-                                        <select required name='hour' onchange='this.form.()'>
+                                        <select required name='hour'>
                                             <option value="">Select hour</option>
                                             <option value="10-00">10:00</option>
                                             <option value="12-00">12:00</option>
@@ -204,7 +207,7 @@ https://templatemo.com/tm-507-victory
                                 </div>
                                 <div class="col-md-6">
                                     <fieldset>
-                                        <select required class="person" name='persons' onchange='this.form.()'>
+                                        <select required class="person" name='persons'>
                                             <option value="">How many persons?</option>
                                             <option value="1-Person">1 Person</option>
                                             <option value="2-Persons">2 Persons</option>
