@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-start">
+      <h1>ADMIN DASHBOARD</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a style="background-color: yellow;" href="/read"><button class="btn btn-outline-success me-2" type="button">User List</button></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/users/user-list"><button class="btn btn-outline-success me-2"  type="button">Price CRUD</button></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a style="float: right;" href="/logout" class="btn btn-sm btn-danger">Logout</a>
+    </form>
+  </nav>
+
+  <h2><%= title %></h2>
+  <a href="/add-user" class="btn btn-sm btn-primary">Add User</a><br/><br/>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone No.</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% userData.forEach(function(user){ %>
+            <tr>
+                <td><%= user.u_id %></td>
+                <td><%= user.f_name %></td>
+                <td><%= user.l_name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.contact_no %></td>
+                <td>
+                    <a href="edit/<%= user.u_id %>" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="delete/<%= user.u_id %>" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -23,9 +23,13 @@ router.post('/login', function (req, res, next) {
     db.query(sql,[mail,pass], function(err,data,fields) {
         if (err) throw err;
         if(data.length>0) {
-            req.session.loggedinUser = true;
-            req.session.mail = mail;
-            res.redirect('/main-dash');
+            if (mail == 'admin@gmail.com') {
+                res.redirect('/read');
+            } else {
+                req.session.loggedinUser = true;
+                req.session.mail = mail;
+                res.redirect('/main-dash');
+            }
         } else {
             alert('Incorrect Credentials');
             res.sendFile(path1 + 'views/login.html');

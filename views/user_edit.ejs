@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<form action="/update" method="post" id="form">
+
+<div class="form-group">
+    <label for="id">Id:</label>
+    <input type="tel" class="form-control" value="<%=user.u_id %>" name="u_id">
+</div>
+
+<div class="form-group">
+    <label for="f_name">First Name:</label>
+    <input type="tel" class="form-control" value="<%= user.f_name %>" name="f_name" placeholder="eg.xyz">
+</div>
+
+<div class="form-group">
+    <label for="l_name">Last Name:</label>
+    <input type="tel" class="form-control" name="l_name" value="<%= user.l_name %>" placeholder="eg.abc">
+</div>
+
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="tel" class="form-control" name="email" value="<%= user.email %>" placeholder="eg.xyz@gmail.com" readonly>
+</div>
+
+<div class="form-group">
+    <label for="contact_no">Contact No:</label>
+    <input type="tel" class="form-control" name="contact_no" value="<%= user.contact_no %>" placeholder="eg.121212">
+</div>
+
+<div class="form-group">
+    <input type="submit" class="btn btn-primary" >
+</div>
+</form>
+</div>
+</body>
+</html>

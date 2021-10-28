@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+  <form action="<%=(typeof editData1!='undefined')?'/users/add_1/'+editData1.d_id:'/users/add_1'%>" method="POST">
+        
+    <div class="form-group">
+      <label>Category</label>
+      <input class="form-control" type="text" placeholder="Enter dish category" name="d_cat" required >
+    </div>
+
+    <div class="form-group">
+      <label>Dish Name</label>
+      <input class="form-control" type="text" placeholder="Enter dish name" name="d_Name" required >
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input class="form-control" type="text" placeholder="Enter dish amount" name="d_amt" required >
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary">
+    </div>
+</form>
+</div>
+</body>
+</html>

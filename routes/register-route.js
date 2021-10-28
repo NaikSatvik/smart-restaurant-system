@@ -7,7 +7,6 @@ const path1 = path.join(__dirname,'../');
 const bodyParser = require('body-parser');
 let alert = require('alert');
 
-
 app1.use(bodyParser.json());
 
 router.get('/register', function (req, res, next) {

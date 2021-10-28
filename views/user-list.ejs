@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>displaying menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <form class="container-fluid justify-content-start">
+            <h1>ADMIN DASHBOARD</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/read"><button class="btn btn-outline-success me-2" type="button">User List</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="background-color: yellow;" href="/users/user-list"><button class="btn btn-outline-success me-2"  type="button">Price CRUD</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="float: right;" href="/logout" class="btn btn-sm btn-danger">Logout</a>
+            </form>
+        </nav>
+
+        <h2>Menu Dishes List</h2>
+        <!-- <a href="/users/add_1/<%=i%>" class="btn btn-sm btn-primary">Add Dish</a><br/><br/> -->
+            <table border="1" class="table table-dark table-striped">
+                <tr>
+                    <th>dish id</th>
+                    <th>Dish Category</th>
+                    <th>dish name</th>
+                    <th>dish amount </th>
+                    <th>delete</th>
+                    <th>edit</th>
+                </tr>
+
+                <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+                    <tr>
+                        <td>
+                            <%=i %>
+                        </td>
+                        <td>
+                            <%=data.d_cat %>
+                        </td>
+                        <td>
+                            <%=data.d_name %>
+                        </td>
+                        <td>
+                            <%=data.d_amt %>
+                        </td>
+                        <td><a href="/users/delete/<%=data.d_id%>" class="btn btn-sm btn-danger">Delete</a></td>
+                        <td><a href="/users/edit/<%=data.d_id%>" class="btn btn-sm btn-primary">Edit</a></td>
+                    </tr>
+
+                    <% i++; }) %>
+                    <div style="padding-bottom: 2%;">
+                        <a href="/users/add_1/<%=i%>" class="btn btn-sm btn-primary">ADD DISH</a>
+                    </div>
+                        
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="7">No Data Found</td>
+                            </tr>
+                            <% } %>
+            </table>
+    </div>
+</body>
+</html>
